@@ -14,6 +14,11 @@ function showSlide(index) {
     slides[current].hidden = false;
 }
 
+function move(step) {
+    showSlide(current + step);
+    if (timer) startAuto();
+}
+
 function startAuto() {
     clearInterval(timer);
     timer = setInterval(() => showSlide(current + 1), 5000);
@@ -27,23 +32,12 @@ function stopAuto() {
 }
 
 // Pogas
-prevButton.addEventListener("click", () => {
-    showSlide(current - 1);
-    if (timer) startAuto();
-});
-
-nextButton.addEventListener("click", () => {
-    showSlide(current + 1);
-    if (timer) startAuto();
-});
+prevButton.addEventListener("click", () => move(-1));
+nextButton.addEventListener("click", () => move(1));
 
 playButton.addEventListener("click", () => {
     if (timer) stopAuto();
     else startAuto();
 });
-
-prevButton.disabled = false;
-nextButton.disabled = false;
-playButton.disabled = false;
 
 startAuto();

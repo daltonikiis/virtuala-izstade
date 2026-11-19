@@ -9,13 +9,12 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
-
+    <!-- Galvene -->
     <header class="site-header">
         <div class="container">
             <a class="site-title" href="#sakums">Virtuālā izstāde</a>
 
-            <nav class="site-nav" aria-label="Galvenā navigācija">
+            <nav class="site-nav">
                 <ul>
                     <li><a href="#sakums">Sākums</a></li>
                     <li><a href="#par-izstadi">Par izstādi</a></li>
@@ -27,10 +26,11 @@
         </div>
     </header>
 
-    <main id="saturs" tabindex="-1">
-        <section id="sakums" class="hero" aria-labelledby="izstades-nosaukums">
+    <main>
+        <!-- Sākums -->
+        <section id="sakums" class="hero">
             <div class="container">
-                <h1 id="izstades-nosaukums">Tehnoloģiju attīstība un inovācijas</h1>
+                <h1>Tehnoloģiju attīstība un inovācijas</h1>
                 <p>Astoņi eksponāti rāda, kā mainījās skaitļošana un saziņa no Paskāla mehāniskā kalkulatora līdz datoram, kas uzvarēja pasaules čempionu šahā.</p>
                 <a href="#galerija">Apskatīt izstādi</a>
 
@@ -41,17 +41,25 @@
             </div>
         </section>
 
-        <section id="par-izstadi" class="about" aria-labelledby="par-izstadi-virsraksts">
+        <!-- Par izstādi -->
+        <section id="par-izstadi" class="about">
             <div class="container">
-                <h2 id="par-izstadi-virsraksts">Par izstādi</h2>
+                <h2>Par izstādi</h2>
                 <p>Izstāde iepazīstina ar ierīcēm un sistēmām, kas ļāva paveikt agrāk grūti īstenojamus uzdevumus: automatizēt aprēķinus, savienot datorus tīklā, zvanīt bez vadu līnijas un plānot robota kustības.</p>
                 <p>Pie katra eksponāta norādīts nozīmīgs gads vai periods. Daļa fotogrāfiju uzņemta vēlāk muzejos. Vēstures avoti un attēlu licences atrodami lapas beigās.</p>
+
+                <ul class="facts">
+                    <li><strong>8</strong> eksponāti</li>
+                    <li><strong>5</strong> ierīces izlasē</li>
+                    <li><strong>1642–1997</strong> laika posms</li>
+                </ul>
             </div>
         </section>
 
-        <section id="galerija" class="gallery-section" aria-labelledby="galerijas-virsraksts">
+        <!-- Galerija -->
+        <section id="galerija" class="gallery-section">
             <div class="container">
-                <h2 id="galerijas-virsraksts">Tehnoloģiju attīstības posmi</h2>
+                <h2>Tehnoloģiju attīstības posmi</h2>
                 <p>Eksponāti sakārtoti pēc to izstrādes vai ieviešanas laika.</p>
 
                 <ul class="gallery">
@@ -131,15 +139,14 @@
             </div>
         </section>
 
-        <section id="izlase" class="carousel-section" aria-labelledby="izlases-virsraksts">
+        <!-- Karuselis -->
+        <section id="izlase" class="carousel-section">
             <div class="container">
-                <h2 id="izlases-virsraksts">Izstādes izlase</h2>
+                <h2>Izstādes izlase</h2>
                 <p>Izlasē tuvāk apskatāmas piecas ierīces un to darbības principi.</p>
 
-                <!-- Karuseļa HTML pamats. Pārslēgšanu un automātisko režīmu vēlāk pievienot js/script.js.
-                     Kad darbojas JavaScript, aktivizēt vadības pogas un atjaunināt hidden atribūtus. -->
                 <div class="carousel">
-                    <ol id="karusela-slaidi" class="carousel-slides">
+                    <ol class="carousel-slides">
                         <li class="carousel-slide">
                             <figure>
                                 <img src="images/mehaniska-skaitlosana.webp" alt="Misiņa kalkulators ar ciparriteņu rindu korpusa augšpusē" width="330" height="181" loading="lazy">
@@ -188,18 +195,19 @@
                     </ol>
 
                     <div class="carousel-controls">
-                        <button class="carousel-previous" type="button" aria-controls="karusela-slaidi" disabled>Iepriekšējais</button>
-                        <button class="carousel-next" type="button" aria-controls="karusela-slaidi" disabled>Nākamais</button>
-                        <button class="carousel-playback" type="button" aria-controls="karusela-slaidi" disabled>Sākt automātisko pārslēgšanu</button>
+                        <button class="carousel-previous" type="button">Iepriekšējais</button>
+                        <button class="carousel-next" type="button">Nākamais</button>
+                        <button class="carousel-playback" type="button">Apturēt automātisko pārslēgšanu</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="autori" class="site-footer" aria-labelledby="autoru-virsraksts">
+    <!-- Kājene -->
+    <footer id="autori" class="site-footer">
         <div class="container">
-            <h2 id="autoru-virsraksts">Izstādes autori</h2>
+            <h2>Izstādes autori</h2>
             <p>Komanda: Ričards Maksims Reinfelds, Renārs Bērziņš.</p>
             <p>© 2026 Virtuālā izstāde.</p>
             <p><a href="https://github.com/daltonikiis/virtuala-izstade">Projekta repozitorijs GitHub</a></p>
